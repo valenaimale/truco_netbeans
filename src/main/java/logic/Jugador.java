@@ -1,9 +1,12 @@
 package logic;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Collections;
 import java.util.*;
+
 public class Jugador {
+
     String nombre;
     ArrayList<Carta> cartasRepartidas;
     int puntaje;
@@ -11,44 +14,53 @@ public class Jugador {
     public Jugador(String nombre, int puntaje) {
         this.nombre = nombre;
         this.puntaje = puntaje;
-        this.cartasRepartidas=new ArrayList<>();
+        this.cartasRepartidas = new ArrayList<>();
     }
+
     public ArrayList<Carta> getCartasRepartidas() {
         return cartasRepartidas;
     }
+
     public void setCartasRepartidas(ArrayList<Carta> cartasRepartidas) {
         this.cartasRepartidas = cartasRepartidas;
     }
+
     public int getPuntaje() {
         return puntaje;
     }
-    public void setPuntaje(int puntaje){
-        this.puntaje+=puntaje;
+
+    public void setPuntaje(int puntaje) {
+        this.puntaje += puntaje;
     }
-    public String getNombre(){
+
+    public String getNombre() {
         return nombre;
     }
+
     public void mostrarCartasRepartidas() {
         if (cartasRepartidas.isEmpty()) {
             System.out.println("el jugador tiro todas las cartas.");
         } else {
             System.out.println("Cartas en mano:");
             for (Carta carta : cartasRepartidas) {
-                System.out.println(carta + " ."+ "("+ cartasRepartidas.indexOf(carta)+ ")");
+                System.out.println(carta + " ." + "(" + cartasRepartidas.indexOf(carta) + ")");
             }
         }
     }
-    public void setAgregarCarta(Carta cartaRemovida){
+
+    public void setAgregarCarta(Carta cartaRemovida) {
         cartasRepartidas.add(cartaRemovida);
     }
-    public void removerCartasSinTirar(Mazo mazo1){
-        while(!cartasRepartidas.isEmpty()){
-            Carta sinTirar=cartasRepartidas.remove(0);
+
+    public void removerCartasSinTirar(Mazo mazo1) {
+        while (!cartasRepartidas.isEmpty()) {
+            Carta sinTirar = cartasRepartidas.remove(0);
             mazo1.devolverCartaAlMazo(sinTirar);
-        }   
+        }
     }
-    public Carta tirarCarta(int posCarta){
-        Carta cartaTirada=cartasRepartidas.remove(posCarta);
+
+    public Carta tirarCarta(int posCarta) {
+        Carta cartaTirada = cartasRepartidas.remove(posCarta);
         return cartaTirada;
     }
     /*
@@ -383,7 +395,6 @@ public class Jugador {
                 
         }
     }
-*/
-
+     */
 
 }
