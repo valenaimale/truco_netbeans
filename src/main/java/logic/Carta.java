@@ -29,4 +29,9 @@ public class Carta {
         return palo;
     }
 
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+    
+
 }
