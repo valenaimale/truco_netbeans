@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Juego {
 
-    Mesa mesa;//preguntarle a ruben, para mi podria ir jugador como atributo tambien ya que las manos las gana un jugador  no una carta
+    Mesa mesa;
 
     public Juego(Mesa mesa) {
         this.mesa = mesa;

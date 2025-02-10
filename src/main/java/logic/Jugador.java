@@ -63,6 +63,25 @@ public class Jugador {
         Carta cartaTirada = cartasRepartidas.remove(posCarta);
         return cartaTirada;
     }
+    
+    public int ingresarDatos(){
+        Scanner scanner=new Scanner(System.in);
+        int opcion=scanner.nextInt();
+        while(opcion>5 || opcion<1){
+            System.out.println("ingrese un numero entre 1 y 5. Vuelva a ingresar un numero por favor /n");
+            opcion=scanner.nextInt();    
+        }
+        return opcion;
+    }
+    public int ingresarDatosParaEnvidoEnvido(){
+        Scanner scanner=new Scanner(System.in);
+        int opcion=scanner.nextInt();
+        while(opcion>4 || opcion<1){
+            System.out.println("ingrese un numero entre 1 y 4. Vuelva a ingresar un numero por favor /n");
+            opcion=scanner.nextInt();    
+        }
+        return opcion;
+    }
     /*
     public void cantarEnvido(){
         int opcion;
